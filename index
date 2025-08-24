@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <title>NativTV</title>
+	<meta charSet="utf-8"/><link rel="icon" href="favicon.ico"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<meta http-equiv="x-ua-compatible" content="IE=edge">
+			<link href="https://vjs.zencdn.net/8.23.4/video-js.css" rel="stylesheet" />
+			<link href="node_modules/video.js/dist/video-js.css" rel="stylesheet">
+			<link href="dist/videojs-playlist-ui.css" rel="stylesheet">
+			<script src="https://vjs.zencdn.net/8.23.4/video.min.js"></script>
+			<script src="path/to/videojs-playlist/dist/videojs-playlist.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script>
+			
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f4f4f4;
+    }
+	h1 {
+	text-align: center
+	}
+	
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .flex-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      flex: 1 1 300px;
+      max-width: 400px;
+      text-align: center;
+    }
+	.flex-item h1 {
+      margin-top: 0;
+      color: #333;
+	  text-align: center
+    }
+    .flex-item h2 {
+      margin-top: 0;
+      color: #333;
+	  text-align: center
+    }
+	.header { 
+    height:100px;
+    margin-bottom:10px;
+    background-color:#D3D3D3;
+	text-align: center;
+	}
+	.content {
+    width:690px;
+    height:450px;
+    background-color:#0d7963;
+    float:right;
+	}
+	
+	.sidebar {
+    width:275px;
+    height:450px;
+    background-color:#0d7963;
+    float:left;
+	}
+    .flex-item p {
+      color: #666;
+    }
+    .container {
+     margin: 30px;
+     text-align: center;
+     display: inline-flex;
+        }
+	
+@media (max-width: 800px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
+  }
+}
+  </style>
+<!-- Header -->
+<div class="header">
+ 	<div class="row">
+	<img class="logo" src="NativTv.png" width="90px" height="90px" alt="logo">
+</div>
+</div>
+</head>
+<h1 class="inline-flex items-center justify-center">Live Match Centre : </h1>
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+<div class="flex-container">
+ 	<div class="row">
+		<div class="column">
+			<div class="player-container">
+				<video id="video" class="video-js" height="400" width="700" controls autoplay muted>
+				<source src="http://fl3.moveonjoy.com/USA_NETWORK/index.m3u8" type="application/x-mpegURL" />
+				<data-playlist="">
+				</video>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="vjs-playlist">
+      <!--
+        The contents of this element will be filled based on the
+        currently loaded playlist
+      -->
+		</div>
+      <script src="m3uStreamPlayer.js"></script>	
+		<script src="node_modules/video.js/dist/video.js"></script>
+			<script src="node_modules/videojs-playlist/dist/videojs-playlist.js"></script>
+				<script src="dist/videojs-playlist-ui.js"></script>
+	<script>
+	var player = videojs('video');
+	</script>
+</body> 
+</html>
